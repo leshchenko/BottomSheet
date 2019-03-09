@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "BottomSheetView/BottomSheetPresenter.h"
 
-@interface ViewController ()
+@interface ViewController () <BottomSheetPresenterDelegate>
+
+@property (nonatomic) BottomSheetPresenter * bottomSheetPresenter;
 
 @end
 
@@ -16,8 +19,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIView * contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    contentView.backgroundColor = UIColor.brownColor;
+    self.bottomSheetPresenter = [[BottomSheetPresenter alloc] initWith:self.view
+                                                           andDelegate:self];
+    self.bottomSheetPresenter.isBottomSheetHidden = YES;
+    [self.bottomSheetPresenter setupBottomSheetViewWith:contentView];
 }
 
+
+
+
+- (void)animationFinished {
+    NSLog(@"Finished");
+}
+
+- (double)bounceHeight {
+    return 500;
+}
+
+- (double)expandedHeight {
+    return 300;
+}
+
+- (double)collapsedHeight
+{
+    return 100;
+}
 
 @end
