@@ -13,6 +13,9 @@
 		CC098BCB2233AFCB000B7FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC098BCA2233AFCB000B7FCD /* Assets.xcassets */; };
 		CC098BCE2233AFCB000B7FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC098BCC2233AFCB000B7FCD /* LaunchScreen.storyboard */; };
 		CC098BD12233AFCB000B7FCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC098BD02233AFCB000B7FCD /* main.m */; };
+		CC098BDA2233B58A000B7FCD /* BottomSheetPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC098BD92233B58A000B7FCD /* BottomSheetPresenter.m */; };
+		CC098BDD2233B6AA000B7FCD /* ChevronView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC098BDC2233B6AA000B7FCD /* ChevronView.m */; };
+		CC098BE02233B785000B7FCD /* BottomSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC098BDF2233B785000B7FCD /* BottomSheetView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		CC098BCD2233AFCB000B7FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC098BCF2233AFCB000B7FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC098BD02233AFCB000B7FCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC098BD82233B58A000B7FCD /* BottomSheetPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetPresenter.h; sourceTree = "<group>"; };
+		CC098BD92233B58A000B7FCD /* BottomSheetPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSheetPresenter.m; sourceTree = "<group>"; };
+		CC098BDB2233B6AA000B7FCD /* ChevronView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChevronView.h; sourceTree = "<group>"; };
+		CC098BDC2233B6AA000B7FCD /* ChevronView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChevronView.m; sourceTree = "<group>"; };
+		CC098BDE2233B785000B7FCD /* BottomSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetView.h; sourceTree = "<group>"; };
+		CC098BDF2233B785000B7FCD /* BottomSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSheetView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		CC098BC02233AFCA000B7FCD /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				CC098BD72233B47F000B7FCD /* BottomSheetView */,
 				CC098BC12233AFCA000B7FCD /* AppDelegate.h */,
 				CC098BC22233AFCA000B7FCD /* AppDelegate.m */,
 				CC098BC42233AFCA000B7FCD /* ViewController.h */,
@@ -69,6 +79,19 @@
 				CC098BD02233AFCB000B7FCD /* main.m */,
 			);
 			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		CC098BD72233B47F000B7FCD /* BottomSheetView */ = {
+			isa = PBXGroup;
+			children = (
+				CC098BD82233B58A000B7FCD /* BottomSheetPresenter.h */,
+				CC098BD92233B58A000B7FCD /* BottomSheetPresenter.m */,
+				CC098BDB2233B6AA000B7FCD /* ChevronView.h */,
+				CC098BDC2233B6AA000B7FCD /* ChevronView.m */,
+				CC098BDE2233B785000B7FCD /* BottomSheetView.h */,
+				CC098BDF2233B785000B7FCD /* BottomSheetView.m */,
+			);
+			path = BottomSheetView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC098BC62233AFCA000B7FCD /* ViewController.m in Sources */,
+				CC098BE02233B785000B7FCD /* BottomSheetView.m in Sources */,
 				CC098BD12233AFCB000B7FCD /* main.m in Sources */,
 				CC098BC32233AFCA000B7FCD /* AppDelegate.m in Sources */,
+				CC098BDD2233B6AA000B7FCD /* ChevronView.m in Sources */,
+				CC098BDA2233B58A000B7FCD /* BottomSheetPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BottomSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BottomSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
